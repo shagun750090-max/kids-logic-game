@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Easy Logic Game 🌟 बच्चों का आसान खेल</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background floating cute shapes -->
+  <div class="bg-floats" aria-hidden="true">
+    <span class="bubble b1">🎈</span>
+    <span class="bubble b2">⭐</span>
+    <span class="bubble b3">☁️</span>
+    <span class="bubble b4">✨</span>
+    <span class="bubble b5">🎈</span>
+  </div>
+
+  <div class="main-wrapper">
+    <!-- Top Header -->
+    <header class="header">
+      <div class="title-group">
+        <span class="mascot">🐻</span>
+        <div>
+          <h1>Kids Logic Game</h1>
+          <p class="sub">आसान और मजेदार खेल! 🎈</p>
+        </div>
+      </div>
+
+      <div class="header-tools">
+        <button id="soundBtn" class="pill-btn" title="Sound On/Off">
+          <span id="soundIcon">🔊</span> Sound
+        </button>
+        <div class="star-pill">
+          <span>⭐</span>
+          <span id="scoreText">0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Game Card -->
+    <main id="gameCard" class="game-card">
+      <!-- Level Indicator & Progress Bar -->
+      <div class="level-bar">
+        <span id="levelText" class="level-badge">Level 1 of 30</span>
+        <button id="speakBtn" class="voice-btn" title="Sunne ke liye click karein">
+          🔊 Bol kar sunao
+        </button>
+      </div>
+      <div class="progress-track" title="Game Progress">
+        <div id="progressBar" class="progress-fill"></div>
+      </div>
+
+      <!-- Question Prompt (Clear & Big) -->
+      <div class="question-header">
+        <h2 id="questionPrompt">Which one is different?</h2>
+        <p id="hindiPrompt" class="hindi-text">अलग कौन सा है? उसे छुओ!</p>
+      </div>
+
+      <!-- Question Preview (e.g. for pattern or target) -->
+      <div id="previewArea" class="preview-area">
+        <!-- Shows sequence or target if needed -->
+      </div>
+
+      <!-- Big Tap-Friendly Choices -->
+      <div class="choices-box">
+        <div id="optionsGrid" class="options-grid">
+          <!-- 3 or 4 big cards will be inserted here -->
+        </div>
+      </div>
+
+      <!-- Feedback Area -->
+      <div id="feedbackMsg" class="feedback-msg"></div>
+
+      <!-- Next Level Button (Appears on correct answer) -->
+      <div class="action-row">
+        <button id="nextBtn" class="big-action-btn hidden">Next Level ➡️ (अगला)</button>
+      </div>
+    </main>
+
+    <!-- End of Game Celebration Card -->
+    <section id="winScreen" class="game-card win-card hidden">
+      <div class="win-trophy">🏆</div>
+      <h2>Super Star Kid! 🎉</h2>
+      <p class="win-msg">शाबाश! आपने सारे सवाल जीत लिए!</p>
+      <div class="star-rating">⭐⭐⭐⭐⭐</div>
+      <button id="playAgainBtn" class="big-action-btn">Play Again 🔄 (फिर से खेलो)</button>
+    </section>
+  </div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="game.js"></script>
+</body>
+</html>
